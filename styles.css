@@ -1,0 +1,294 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    /* Данный селектор обнуляет все отступы и т.д. * {
+        padding: 0;
+        margin: 0;
+    }  */
+
+    body {
+    background-color: #f1f1f1;  
+    color: #0f141e; 
+
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+
+    /* font: normal 16px 'Roboto', sans-serif; можно и так задавать шрифт */
+
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    a:active {
+        color: blue;
+        /* Это делает ссылку синей, когда я кликаю на нее и удерживаю,
+        как только отпускаю, перехожу по ссылке */
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    /*  hover задает динамику, т.е. в нашем случае, при наведении ссылка
+    подчеркивается */
+
+    a:visited {
+        color: grey;
+        /* Показывает, что мы эту ссылку уже посетили */
+    }
+    .avatar {
+        width: 200px;
+        /* задает ширину */
+        border-radius: 28px;
+        /* задает скругление, можно вообще круглым сделать, если поставить 50% */
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+        /* затеняет*/
+
+    }
+
+    .info {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+        .info {
+            text-align: center;
+            display: block;
+        }
+    } 
+
+
+    .info-text {
+        margin-left: 40px;
+    }
+
+    .info-text h4 {
+        margin-bottom: 10px;
+    }
+
+    .info p {
+        color: #86898f;
+        margin: 0;
+        font-style: italic;
+        /* задает курсив и т.д. */
+        font-weight: bold;
+        /* задает жирность шрифта */
+        text-decoration:none;
+        /* это свойство позволяет подчеркивать, зачеркивать текс и т.д. */
+
+        /* text-transform: uppercase; Это свойство позволяет все писать с маленькой, 
+        большой буквы или все слова начинать с большой буквы */
+
+        /* letter-spacing: 5px; */
+        /* это свойство указывает количество пикселей между символами*/
+
+        /* word-spacing: 42px; */
+        /* это свойство указывает количество пикселей между словами */
+    }
+
+    /* Box Model */
+
+    .container {
+        max-width: 750px;
+        /* Можно написать 100%. Чтобы сайт не был статическим задаем 
+        max-width */
+        margin: auto;
+        /* это сделало все посередине */
+        padding-top: 30px;
+
+    }
+
+    .container h2 {
+        padding-bottom: 5px;
+    }
+    /* padding - внутренний отступ в самом блоке, можно задавать с каждой 
+    стороны разный, начинается с верху и идет по часовой стрелке. Можно
+    также сделать через padding-left, -top и т.д.
+    border - мы указываем сначала ширину границы, затем ее
+        стиль, затем цвет   
+    margin - внешний отступ, т.е. отступ самого блока. Остальное также
+    как для паддинга */
+    /* .social {
+        background: green; */
+        /* padding: 15px 20px 25px 30px;
+        margin: 20px;
+    
+        border: 5px solid red;
+        border-bottom-style: dotted;
+        /* Можно сделать разными стилями, надо смотреть документацию*/
+        /* border-top-width: 15px;
+        border-right-color: blue; */ 
+
+        
+    /* } */
+    /* Здесь стили будт применяться ко всем div, даже если вложенные в другие 
+    дивы будут. Для того, чтобы стили применялись только к родным дивам, 
+    нужно подставить знак >. И выглядело это бы вот так: .box-model > div*/
+    /* .box-model div {
+        float: left;
+        /* теперь элементы выстроились в линию */
+        /* background: #000;
+        height: 200px;
+        border: 4px solid red;
+        width: 25%;
+        box-sizing: border-box; */
+        /* Это свойство для того, что бы учитывать границу, при определнии 
+        ширины бокса }*/ 
+
+    .bg-yellow {
+        background: #fff9dc;
+    }
+ 
+    .bg-green {
+        background: #e5ffe7;
+     }
+
+    
+    .bg-red {
+        background: #ffe5e5;
+    }
+ 
+ 
+    .card {
+         padding: 15px 20px;
+         /* background: red; */
+         margin-bottom: 20px;
+         /* margin-bottom мы сделали для того, чтобы блоки разделились 
+         между собой. Лучше воспользоватся этим свойством, 
+         чем марджин-топ */
+         border-radius: 15px;
+         /* Добавляем скругления */
+    }
+ 
+    .card h2 {
+         margin-bottom: 10px;
+    }
+ 
+    .list {
+         padding: 0 20px;
+         /* У нашего списка автоматически padding=40, если хотим его убрать,
+         его нужно будет исправить на 0. Или поменять на другое значение*/
+         /* list-style: none; так мы можем убрать нумерацию из списка*/
+
+    } 
+    
+    .list li {
+        color: #86898f;
+        margin-bottom: 10px;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    .table td {
+        padding-bottom: 10px;
+    }
+
+    .table td:nth-child(2), .table td:nth-child(3) {
+        color: #86898f;
+    }
+    /* Данным псевдо селектором мы выбрали  конкретный порядковый
+    элемент (в нашем случае столбец) из нашей таблицы и окрасили 
+    его в серый */
+    /* ВАЖНО! Через запятую мы можем перечислять классы и задавать
+    для них одинаковые свойства */
+
+    /* .table tr:nth-child(even) {
+        background: blueviolet;
+    } Можно добавлять свойства четным и нечетным (even/odd) 
+    элементам (рядам) */
+    .link-list {
+        list-style: square;
+        /* Чтобы посмотреть, какие можно поставить значения (точки,
+        квадратики и т.д., нужно погуглить: list-style/mdn. Можно
+        даже вставлять туда свои собственные картинки */
+        padding: 15px; 
+    }
+
+    .link-list li {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .contact h2 {
+        text-align: center;
+    }
+
+    .form-group label{
+        display: block;
+        /* Свойство, которое сделало из строчки блок */
+        font-size: 14px;
+        color: #86898f;
+
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        background: transparent;
+        border-bottom: 1px solid #ccc;
+        color: #000;
+        padding: 15px 0 10px 5px;
+        outline: black;
+        font-family: inherit;
+     }
+
+    .row {
+        display: flex;
+        /* Сделало элементы в этом класе на одной строке */
+        margin-bottom: 20px;
+    }
+
+    .row > .form-group {
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    .btn {
+        background: #111;
+        padding: 15px 20px;
+        color: #fff;
+        border: none;
+        font-family: inherit;
+        cursor: pointer;
+        /* Теперь меняется курсор */
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        /* Кнопка начинает подсвечиваться */
+    }
+
+    /* Positin, как это работает в css */
+
+    /* .position {
+        position: relative;
+        border: 4px solid black;
+        margin-top: 40px;
+        padding: 20px;
+        height: 300px;
+
+    }
+
+    .box {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border-radius: 50%;
+        /* По умолчанию значение position: static. Про это нужно
+        будет почитать*/
+        /* top: 150px;
+        left: 0; */
+         /* width: 50px;
+        height: 50px;
+        background: indianred;
+    } */
+
+    /* */ 
